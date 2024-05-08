@@ -14,7 +14,7 @@ export default function AuthForm() {
             showLinks={false}
             view="magic_link"
             providers={["google"]}
-            redirectTo="https://watch-list-app.vercel.app/auth/callback"
+            redirectTo="https://watch-list-app-drhndks-projects.vercel.app/auth/callback"
         />
     )
 }
