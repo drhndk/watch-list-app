@@ -23,7 +23,7 @@ export default async function WatchList() {
         <div className="w-full md:p-8 p-6 bg-slate-800 min-h-screen">
             <div className="w-full flex justify-between">
                 <h1 className="text-green-500">Watch List</h1>
-                <form action="/auth/signout" method="POST" className="space-y-2">
+                <form action="https://watch-list-app.vercel.app/auth/signout" method="POST" className="space-y-2">
                     <div className="flex items-center gap-2 break-all w-[180px]">
                         <img className="rounded-full" width={40} src={user.user_metadata.avatar_url} alt="" />
                         <h1 className="text-white">{user.user_metadata.name}</h1>

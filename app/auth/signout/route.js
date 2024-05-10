@@ -1,5 +1,6 @@
 import { createServerClient } from "@supabase/ssr";
 import { cookies } from "next/headers";
+import { redirect } from "next/navigation";
 import { NextResponse } from "next/server";
 
 export async function POST(req) {
@@ -27,7 +28,8 @@ export async function POST(req) {
 
     if (session) {
         await supabase.auth.signOut()
+        redirect("/")
     }
 
-    return NextResponse.redirect(new URL("/",req.url))
+    return NextResponse.redirect(new URL("/",req.url),{status: 302})
 }
