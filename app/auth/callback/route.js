@@ -28,6 +28,7 @@ export async function GET(request) {
       }
     );
     const { error } = await supabase.auth.exchangeCodeForSession(code);
+    
     if (!error) {
       return NextResponse.redirect(new URL("/watch-list",request.url));
     }
